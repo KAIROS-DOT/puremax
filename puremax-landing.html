@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puremax — Darmowa Próba Czyszczenia 1m² | Skulsk, Konin</title>
+<meta name="description" content="Mycie elewacji, dachów i kostki brukowej w okolicach Konina. Darmowa próba czyszczenia 1m² na Twojej posesji. 6 lat doświadczenia, 1200+ klientów.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a1a;
+  --ink-mid: #4a4a4a;
+  --ink-light: #7a7a7a;
+  --surface: #fafaf8;
+  --surface-warm: #f3f1ec;
+  --surface-card: #ffffff;
+  --accent: #2d6a4f;
+  --accent-light: #40916c;
+  --accent-bg: #d8f3dc;
+  --accent-bg-soft: #edf6f0;
+  --cta: #e85d26;
+  --cta-hover: #d14f1c;
+  --cta-light: #fff0ea;
+  --border: #e0ddd6;
+  --border-light: #eae8e3;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.1);
+  --radius: 10px;
+  --radius-lg: 16px;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--surface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ═══ UTILITY ═══ */
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section--alt { background: var(--surface-warm); }
+
+/* ═══ TOPBAR ═══ */
+.topbar {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.topbar a { color: white; text-decoration: underline; text-underline-offset: 2px; }
+
+/* ═══ HERO ═══ */
+.hero {
+  padding: 64px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -200px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--accent-bg) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-bg-soft);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero-badge svg { flex-shrink: 0; }
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1.12;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-sub {
+  font-size: 18px;
+  color: var(--ink-mid);
+  margin-bottom: 32px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ═══ BEFORE/AFTER VISUAL ═══ */
+.ba-card {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  position: relative;
+}
+.ba-slider {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  cursor: col-resize;
+  user-select: none;
+}
+.ba-slider__before, .ba-slider__after {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.ba-slider__before {
+  background: linear-gradient(135deg, #8b7355 0%, #6d5a3f 40%, #554433 100%);
+  color: rgba(255,255,255,0.9);
+  clip-path: inset(0 50% 0 0);
+}
+.ba-slider__before::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(0,0,0,0.08) 8px,
+    rgba(0,0,0,0.08) 9px
+  );
+}
+.ba-slider__before .ba-label {
+  position: relative;
+  z-index: 2;
+  background: rgba(0,0,0,0.5);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  transform: translateX(-40px);
+}
+.ba-slider__after {
+  background: linear-gradient(135deg, #e8e4dd 0%, #f5f3ef 40%, #fafaf8 100%);
+  color: var(--accent);
+  clip-path: inset(0 0 0 50%);
+}
+.ba-slider__after::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    rgba(45,106,79,0.03) 20px,
+    rgba(45,106,79,0.03) 21px
+  );
+}
+.ba-slider__after .ba-label {
+  position: relative;
+  z-index: 2;
+  background: var(--accent);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  transform: translateX(40px);
+}
+.ba-slider__line {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: white;
+  z-index: 10;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.ba-slider__handle {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px; height: 44px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ba-slider__handle svg { color: var(--ink-mid); }
+.ba-caption {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--ink-light);
+  border-top: 1px solid var(--border-light);
+}
+.ba-caption strong { color: var(--ink); font-weight: 600; }
+
+/* ═══ BUTTONS ═══ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn--primary {
+  background: var(--cta);
+  color: white;
+  box-shadow: 0 2px 8px rgba(232,93,38,0.3);
+}
+.btn--primary:hover {
+  background: var(--cta-hover);
+  box-shadow: 0 4px 16px rgba(232,93,38,0.35);
+  transform: translateY(-1px);
+}
+.btn--secondary {
+  background: var(--surface-card);
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+}
+.btn--secondary:hover {
+  border-color: var(--ink-mid);
+  background: var(--surface-warm);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--accent);
+  padding: 14px 16px;
+}
+.btn--ghost:hover { background: var(--accent-bg-soft); }
+.btn--large {
+  padding: 18px 36px;
+  font-size: 17px;
+  border-radius: 12px;
+}
+.btn--full { width: 100%; justify-content: center; }
+
+/* ═══ TRUST BAR ═══ */
+.trust-bar {
+  display: flex;
+  gap: 32px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.trust-icon {
+  width: 44px; height: 44px;
+  background: var(--accent-bg-soft);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.trust-icon svg { color: var(--accent); }
+.trust-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.trust-label {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.3;
+}
+
+/* ═══ PROBLEM SECTION ═══ */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.problem-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: box-shadow 0.2s;
+}
+.problem-card:hover { box-shadow: var(--shadow-md); }
+.problem-icon {
+  width: 48px; height: 48px;
+  background: var(--cta-light);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.problem-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.problem-card p {
+  font-size: 14px;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+.section-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.section-desc {
+  font-size: 16px;
+  color: var(--ink-mid);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ═══ HOW IT WORKS ═══ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+  counter-reset: step;
+}
+.step {
+  position: relative;
+  padding: 32px 24px;
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  counter-increment: step;
+}
+.step::before {
+  content: counter(step);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.step h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.step p {
+  font-size: 14px;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+.step-arrow {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--border);
+  z-index: 2;
+}
+
+/* ═══ PACKAGES ═══ */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.pkg {
+  background: var(--surface-card);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  position: relative;
+  transition: all 0.25s;
+}
+.pkg:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.pkg--featured {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+.pkg-badge {
+  position: absolute;
+  top: -13px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.pkg-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 4px;
+}
+.pkg h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+.pkg-price {
+  font-size: 15px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.pkg-list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+.pkg-list li {
+  padding: 7px 0;
+  font-size: 14px;
+  color: var(--ink-mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.pkg-list li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.pkg-for {
+  font-size: 13px;
+  color: var(--ink-light);
+  font-style: italic;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+/* ═══ FORM SECTION ═══ */
+.form-section {
+  background: var(--accent);
+  padding: 80px 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.form-section::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.form-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.form-section .section-desc {
+  color: rgba(255,255,255,0.8);
+}
+.form-benefits {
+  list-style: none;
+  margin-top: 24px;
+}
+.form-benefits li {
+  padding: 8px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.9);
+}
+.form-benefits li svg { flex-shrink: 0; color: var(--accent-bg); }
+.form-box {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+.form-box h3 {
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.form-box .form-sub {
+  color: var(--ink-light);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--surface);
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--ink-light);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.upload-area {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--surface);
+}
+.upload-area:hover {
+  border-color: var(--accent);
+  background: var(--accent-bg-soft);
+}
+.upload-area svg { color: var(--ink-light); margin-bottom: 8px; }
+.upload-area p { font-size: 13px; color: var(--ink-mid); }
+.upload-area span { font-size: 12px; color: var(--ink-light); }
+.form-privacy {
+  font-size: 12px;
+  color: var(--ink-light);
+  margin-top: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.form-privacy svg { flex-shrink: 0; margin-top: 1px; }
+
+/* ═══ TESTIMONIALS ═══ */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.testimonial {
+  background: var(--surface-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+.testimonial-stars {
+  color: #f59e0b;
+  font-size: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+.testimonial p {
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.65;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonial-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--accent);
+}
+.testimonial-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.testimonial-loc {
+  font-size: 12px;
+  color: var(--ink-light);
+}
+
+/* ═══ FAQ ═══ */
+.faq-list {
+  max-width: 700px;
+  margin: 40px auto 0;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border-light);
+}
+.faq-q {
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq-q:hover { color: var(--accent); }
+.faq-q svg {
+  flex-shrink: 0;
+  transition: transform 0.25s;
+  color: var(--ink-light);
+}
+.faq-item.open .faq-q svg { transform: rotate(45deg); color: var(--accent); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-a-inner {
+  padding: 0 0 20px;
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+/* ═══ FINAL CTA ═══ */
+.final-cta {
+  text-align: center;
+  padding: 80px 0;
+  background: var(--surface-warm);
+}
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 12px;
+}
+.final-cta p {
+  font-size: 16px;
+  color: var(--ink-mid);
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.final-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ═══ FOOTER ═══ */
+footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-light);
+  border-top: 1px solid var(--border-light);
+}
+footer a { color: var(--ink-mid); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ═══ STICKY MOBILE CTA ═══ */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: white;
+  padding: 12px 16px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  gap: 8px;
+}
+.sticky-cta .btn { flex: 1; justify-content: center; padding: 14px 12px; font-size: 14px; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+  .hero { padding: 40px 0 56px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-grid > :last-child { order: -1; }
+  .trust-bar { gap: 20px; }
+  .trust-item { flex: 1 1 45%; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step-arrow { display: none; }
+  .packages { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .testimonials { grid-template-columns: 1fr; }
+  .sticky-cta { display: flex; }
+  body { padding-bottom: 72px; }
+  .form-box { padding: 28px 20px; }
+}
+
+@media (max-width: 480px) {
+  .steps { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+}
+
+/* ═══ ANIMATIONS ═══ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-grid > * {
+  animation: fadeInUp 0.6s ease both;
+}
+.hero-grid > :last-child { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  Darmowa próba czyszczenia 1m² — <a href="#formularz">Umów się teraz</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Od 6 lat w regionie Konina
+        </div>
+        <h1>Twój dom jak&nbsp;nowy — <em>bez rusztowań, w&nbsp;jeden&nbsp;dzień</em></h1>
+        <p class="hero-sub">Wyczyścimy Twój dach, elewację lub kostkę brukową. Bezpiecznie, ekologicznie, z gwarancją efektu. Najpierw pokażemy Ci efekt na 1m² — za darmo.</p>
+        <div class="hero-ctas">
+          <a href="#formularz" class="btn btn--primary btn--large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Wyślij zdjęcie — wycena gratis
+          </a>
+          <a href="tel:+48XXXXXXXXX" class="btn btn--secondary btn--large">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Zadzwoń
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="ba-card">
+          <div class="ba-slider" id="baSlider">
+            <div class="ba-slider__before" id="baBefore">
+              <span class="ba-label">PRZED</span>
+            </div>
+            <div class="ba-slider__after" id="baAfter">
+              <span class="ba-label">PO CZYSZCZENIU</span>
+            </div>
+            <div class="ba-slider__line" id="baLine"></div>
+            <div class="ba-slider__handle" id="baHandle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 3-5 9 5 9"/><path d="m16 3 5 9-5 9"/></svg>
+            </div>
+          </div>
+          <div class="ba-caption">
+            <span><strong>Elewacja domu</strong> — okolice Konina</span>
+            <span>Przesuń suwak →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <div class="trust-num">1 200+</div>
+          <div class="trust-label">zadowolonych klientów</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div>
+          <div class="trust-num">5/5</div>
+          <div class="trust-label">opinia Google</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div>
+          <div class="trust-num">100+</div>
+          <div class="trust-label">projektów rocznie</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="trust-num">6 lat</div>
+          <div class="trust-label">na rynku</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-eyebrow">Dlaczego to ważne</div>
+    <h2 class="section-title">Brud na elewacji to nie tylko estetyka</h2>
+    <p class="section-desc">Mech, glony i porosty niszczą materiały budowlane Twojego domu. Im dłużej czekasz, tym większe szkody — i wyższy koszt naprawy.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e85d26" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>Niszczone tynki i dachówki</h3>
+        <p>Mech i porosty przenikają w strukturę materiału. Każdy sezon bez czyszczenia skraca żywotność pokrycia Twojego domu.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e85d26" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Zarodniki przy domu</h3>
+        <p>Glony i pleśnie na elewacji to źródło zarodników, które mogą przenikać do wnętrza. Szczególnie istotne gdy w domu są dzieci lub alergicy.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e85d26" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3>Spadek wartości nieruchomości</h3>
+        <p>Brudna elewacja, czarny dach, zaniedbana kostka — to pierwsza rzecz, którą widzi każdy gość, sąsiad lub potencjalny kupujący.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-eyebrow">Jak to działa</div>
+      <h2 class="section-title">4 kroki do czystego domu</h2>
+      <p class="section-desc" style="margin:0 auto 0;">Bez formalności, bez ryzyka. Najpierw zobaczysz efekt — potem decydujesz.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Wyślij zdjęcie</h3>
+        <p>Przez formularz, WhatsApp lub telefon. Pokażesz nam co chcesz wyczyścić — my wycenimy.</p>
+        <span class="step-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </div>
+      <div class="step">
+        <h3>Darmowa próba 1m²</h3>
+        <p>Przyjeżdżamy i czyścimy 1m² na Twojej ścianie, dachu lub kostce. Zobaczysz różnicę gołym okiem.</p>
+        <span class="step-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </div>
+      <div class="step">
+        <h3>Wybierz pakiet</h3>
+        <p>BASIC, STANDARD lub PREMIUM — Ty decydujesz ile chcesz zainwestować. Wycena od razu, bez czekania.</p>
+        <span class="step-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </div>
+      <div class="step">
+        <h3>Efekt WOW</h3>
+        <p>Realizujemy zlecenie. Twój dom wygląda jak nowy — bez rusztowań, bez bałaganu. Gwarantujemy efekt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-eyebrow">Pakiety</div>
+      <h2 class="section-title">Wybierz poziom ochrony</h2>
+      <p class="section-desc" style="margin:0 auto;">Każdy pakiet obejmuje dojazd gratis i darmową próbę czyszczenia 1m².</p>
+    </div>
+    <div class="packages">
+      <!-- BASIC -->
+      <div class="pkg">
+        <div class="pkg-name">Basic</div>
+        <h3>Odświeżenie</h3>
+        <div class="pkg-price">od 10 zł / m²</div>
+        <ul class="pkg-list">
+          <li>Mycie ciśnieniowe lub SoftWash</li>
+          <li>Usunięcie brudu i nalotów</li>
+          <li>Dojazd gratis</li>
+          <li>Ekologiczne środki</li>
+        </ul>
+        <a href="#formularz" class="btn btn--secondary btn--full">Zapytaj o wycenę</a>
+        <p class="pkg-for">Dla tych, którzy chcą szybko odświeżyć wygląd posesji</p>
+      </div>
+      <!-- STANDARD -->
+      <div class="pkg pkg--featured">
+        <div class="pkg-badge">Najpopularniejszy</div>
+        <div class="pkg-name">Standard</div>
+        <h3>Ochrona</h3>
+        <div class="pkg-price">od 20 zł / m²</div>
+        <ul class="pkg-list">
+          <li>Wszystko z pakietu BASIC</li>
+          <li>Odgrzybianie biocydem</li>
+          <li>Usunięcie mchów i porostów</li>
+          <li>Dłuższy efekt czystości</li>
+        </ul>
+        <a href="#formularz" class="btn btn--primary btn--full">Zapytaj o wycenę</a>
+        <p class="pkg-for">Dla tych, którzy chcą usunąć mech i zabezpieczyć dom na dłużej</p>
+      </div>
+      <!-- PREMIUM -->
+      <div class="pkg">
+        <div class="pkg-name">Premium</div>
+        <h3>Pełna Renowacja</h3>
+        <div class="pkg-price">od 30 zł / m²</div>
+        <ul class="pkg-list">
+          <li>Wszystko z pakietu STANDARD</li>
+          <li>Impregnacja hydrofobowa</li>
+          <li>Efekt „mokrej kostki"</li>
+          <li>Gwarancja czystości</li>
+        </ul>
+        <a href="#formularz" class="btn btn--secondary btn--full">Zapytaj o wycenę</a>
+        <p class="pkg-for">Pełna renowacja z gwarancją efektu — najlepsza ochrona nieruchomości</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="formularz">
+  <div class="container">
+    <div class="form-grid">
+      <div>
+        <h2>Wyślij zdjęcie — wycena w&nbsp;24h</h2>
+        <p class="section-desc">Wystarczy zdjęcie tego co chcesz wyczyścić. Odpowiemy z wyceną i umówimy darmową próbę 1m² na Twojej posesji.</p>
+        <ul class="form-benefits">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            Darmowa wycena — bez zobowiązań
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            Darmowa próba czyszczenia 1m²
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            Dojazd gratis — Skulsk, Konin, okolice
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            Odpowiedź w ciągu 24 godzin
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="form-box">
+          <h3>Darmowa wycena</h3>
+          <p class="form-sub">Wypełnij formularz — odezwiemy się z wyceną</p>
+          <form id="leadForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Imię</label>
+                <input type="text" id="name" placeholder="np. Marek" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" placeholder="np. 600 123 456" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="city">Miejscowość</label>
+              <input type="text" id="city" placeholder="np. Konin, Skulsk, Koło" required>
+            </div>
+            <div class="form-group">
+              <label for="service">Co chcesz wyczyścić?</label>
+              <select id="service" required>
+                <option value="" disabled selected>Wybierz usługę</option>
+                <option>Elewację domu</option>
+                <option>Dach</option>
+                <option>Kostkę brukową</option>
+                <option>Ogrodzenie / mur</option>
+                <option>Inne</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Zdjęcie powierzchni (opcjonalne)</label>
+              <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <p id="uploadText">Kliknij lub przeciągnij zdjęcie</p>
+                <span>JPG, PNG — max 10 MB</span>
+                <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="handleFile(this)">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="msg">Dodatkowe informacje (opcjonalne)</label>
+              <textarea id="msg" rows="2" placeholder="np. orientacyjna powierzchnia, termin, pytania"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large btn--full" id="submitBtn">
+              Wyślij i umów darmową próbę
+            </button>
+            <div class="form-privacy">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <span>Twoje dane są bezpieczne. Używamy ich wyłącznie do kontaktu w sprawie wyceny. <a href="#" style="color:var(--ink-light)">Polityka prywatności</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-eyebrow">Opinie klientów</div>
+      <h2 class="section-title">Co mówią nasi klienci</h2>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>„Efekt przeszedł moje oczekiwania. Kostka wygląda jak nowo położona. Ekipa punktualna, po sobie posprzątali. Polecam sąsiadom."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MK</div>
+          <div>
+            <div class="testimonial-name">Marek K.</div>
+            <div class="testimonial-loc">Konin</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>„Bałam się że ciśnienie uszkodzi tynk, ale panowie użyli SoftWash — bezpiecznie i skutecznie. Elewacja jak nowa po 8 latach."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AN</div>
+          <div>
+            <div class="testimonial-name">Anna N.</div>
+            <div class="testimonial-loc">Skulsk</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>„Darmowa próba mnie przekonała — zobaczyłem różnicę na własne oczy. Zamówiłem pełny pakiet z impregnacją. Warto."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">TW</div>
+          <div>
+            <div class="testimonial-name">Tomasz W.</div>
+            <div class="testimonial-loc">Koło</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-eyebrow">Pytania</div>
+      <h2 class="section-title">Najczęściej zadawane pytania</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy mycie ciśnieniowe nie uszkodzi mojej elewacji?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Nie — dobieramy metodę do powierzchni. Delikatne tynki, drewno i dachówki czyścimy metodą SoftWash (niskociśnieniową), która nie uszkadza materiału. Ciśnienie stosujemy tylko tam, gdzie to bezpieczne — np. na kostce brukowej.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Czy środki czyszczące są bezpieczne dla roślin?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Tak. Używamy ekologicznych, biodegradowalnych środków, które są bezpieczne dla roślin, zwierząt i ludzi. Przed myciem zabezpieczamy rabaty i rośliny w bezpośrednim sąsiedztwie.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ile trwa czyszczenie? Czy muszę być w domu?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Przeciętny dom (elewacja + kostka) to 1 dzień roboczy. Nie musisz być obecny/a przez cały czas — wystarczy udostępnić dostęp do wody i posesji. Umawiamy godzinę rozpoczęcia.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Co obejmuje darmowa próba 1m²?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Przyjeżdżamy na Twoją posesję i czyścimy fragment 1m² wybranej powierzchni — elewacji, dachu lub kostki. Zobaczysz efekt na żywo, na własnym domu. Bez zobowiązań — jeśli Ci się nie spodoba, nic nie płacisz.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Jaki jest zasięg — jak daleko dojeżdżacie?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Dojeżdżamy gratis w promieniu ok. 50 km od Skulska — obejmuje to Konin, Koło, Turek, Kalisz, Słupca i okolice. Przy większych zleceniach dojedziemy i dalej — zapytaj.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Ile kosztuje mycie domu / kostki / dachu?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Ceny zaczynają się od 10 zł/m² (pakiet BASIC) do 30+ zł/m² (pakiet PREMIUM z impregnacją). Przykład: mycie elewacji domu 120m² to ok. 1 200 – 3 600 zł zależnie od pakietu. Dokładną wycenę dostaniesz po przesłaniu zdjęcia lub oględzinach na miejscu.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Sprawdź efekt na własnym domu — za 0 zł</h2>
+    <p>Darmowy dojazd, darmowa próba 1m², wycena bez zobowiązań. Wystarczy jedno zdjęcie.</p>
+    <div class="final-cta-buttons">
+      <a href="#formularz" class="btn btn--primary btn--large">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        Wyślij zdjęcie — wycena gratis
+      </a>
+      <a href="tel:+48XXXXXXXXX" class="btn btn--secondary btn--large">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Zadzwoń teraz
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Puremax — Profesjonalne czyszczenie nieruchomości | Skulsk, Konin i okolice</p>
+    <p style="margin-top:8px;"><a href="#">Polityka prywatności</a></p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="tel:+48XXXXXXXXX" class="btn btn--secondary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Zadzwoń
+  </a>
+  <a href="#formularz" class="btn btn--primary">
+    Darmowa wycena
+  </a>
+</div>
+
+<script>
+// ═══ BEFORE/AFTER SLIDER ═══
+(function() {
+  const slider = document.getElementById('baSlider');
+  const before = document.getElementById('baBefore');
+  const after = document.getElementById('baAfter');
+  const line = document.getElementById('baLine');
+  const handle = document.getElementById('baHandle');
+  let isDragging = false;
+
+  function updatePosition(x) {
+    const rect = slider.getBoundingClientRect();
+    let pct = ((x - rect.left) / rect.width) * 100;
+    pct = Math.max(5, Math.min(95, pct));
+    before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+    after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    line.style.left = pct + '%';
+    handle.style.left = pct + '%';
+  }
+
+  slider.addEventListener('mousedown', (e) => { isDragging = true; updatePosition(e.clientX); });
+  document.addEventListener('mousemove', (e) => { if (isDragging) updatePosition(e.clientX); });
+  document.addEventListener('mouseup', () => { isDragging = false; });
+
+  slider.addEventListener('touchstart', (e) => { isDragging = true; updatePosition(e.touches[0].clientX); }, {passive: true});
+  document.addEventListener('touchmove', (e) => { if (isDragging) updatePosition(e.touches[0].clientX); }, {passive: true});
+  document.addEventListener('touchend', () => { isDragging = false; });
+})();
+
+// ═══ FAQ ACCORDION ═══
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const answer = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-a').style.maxHeight = '0';
+  });
+
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+// ═══ FILE UPLOAD ═══
+function handleFile(input) {
+  const text = document.getElementById('uploadText');
+  if (input.files.length > 0) {
+    text.textContent = '✓ ' + input.files[0].name;
+    text.style.color = '#2d6a4f';
+  }
+}
+
+// ═══ FORM SUBMIT ═══
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = '✓ Wysłano! Odezwiemy się w 24h';
+  btn.style.background = '#2d6a4f';
+  btn.disabled = true;
+  // In production: connect to email service / CRM / Elementor form handler
+}
+</script>
+
+</body>
+</html>
